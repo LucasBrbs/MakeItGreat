@@ -10,9 +10,7 @@
 		FC4DA434292BA095007BFE08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA433292BA095007BFE08 /* AppDelegate.swift */; };
 		FC4DA436292BA095007BFE08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA435292BA095007BFE08 /* SceneDelegate.swift */; };
 		FC4DA438292BA095007BFE08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA437292BA095007BFE08 /* ViewController.swift */; };
-		FC4DA43B292BA095007BFE08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4DA439292BA095007BFE08 /* Main.storyboard */; };
 		FC4DA43D292BA097007BFE08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC4DA43C292BA097007BFE08 /* Assets.xcassets */; };
-		FC4DA440292BA097007BFE08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4DA43E292BA097007BFE08 /* LaunchScreen.storyboard */; };
 		FC4DA44B292BA097007BFE08 /* MakeItGreatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA44A292BA097007BFE08 /* MakeItGreatTests.swift */; };
 		FC4DA455292BA097007BFE08 /* MakeItGreatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA454292BA097007BFE08 /* MakeItGreatUITests.swift */; };
 		FC4DA457292BA097007BFE08 /* MakeItGreatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA456292BA097007BFE08 /* MakeItGreatUITestsLaunchTests.swift */; };
@@ -40,9 +38,7 @@
 		FC4DA433292BA095007BFE08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC4DA435292BA095007BFE08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FC4DA437292BA095007BFE08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FC4DA43A292BA095007BFE08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC4DA43C292BA097007BFE08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FC4DA43F292BA097007BFE08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC4DA441292BA097007BFE08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC4DA446292BA097007BFE08 /* MakeItGreatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeItGreatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4DA44A292BA097007BFE08 /* MakeItGreatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeItGreatTests.swift; sourceTree = "<group>"; };
@@ -102,9 +98,7 @@
 				FC4DA433292BA095007BFE08 /* AppDelegate.swift */,
 				FC4DA435292BA095007BFE08 /* SceneDelegate.swift */,
 				FC4DA437292BA095007BFE08 /* ViewController.swift */,
-				FC4DA439292BA095007BFE08 /* Main.storyboard */,
 				FC4DA43C292BA097007BFE08 /* Assets.xcassets */,
-				FC4DA43E292BA097007BFE08 /* LaunchScreen.storyboard */,
 				FC4DA441292BA097007BFE08 /* Info.plist */,
 			);
 			path = MakeItGreat;
@@ -137,6 +131,7 @@
 				FC4DA42C292BA095007BFE08 /* Sources */,
 				FC4DA42D292BA095007BFE08 /* Frameworks */,
 				FC4DA42E292BA095007BFE08 /* Resources */,
+				FC4DA463292BA239007BFE08 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -231,9 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC4DA440292BA097007BFE08 /* LaunchScreen.storyboard in Resources */,
 				FC4DA43D292BA097007BFE08 /* Assets.xcassets in Resources */,
-				FC4DA43B292BA095007BFE08 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +245,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FC4DA463292BA239007BFE08 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FC4DA42C292BA095007BFE08 /* Sources */ = {
@@ -295,25 +308,6 @@
 			targetProxy = FC4DA451292BA097007BFE08 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		FC4DA439292BA095007BFE08 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC4DA43A292BA095007BFE08 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FC4DA43E292BA097007BFE08 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC4DA43F292BA097007BFE08 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FC4DA458292BA097007BFE08 /* Debug */ = {
@@ -442,7 +436,6 @@
 				INFOPLIST_FILE = MakeItGreat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +463,6 @@
 				INFOPLIST_FILE = MakeItGreat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
