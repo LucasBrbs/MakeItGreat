@@ -105,14 +105,13 @@
 		FC4DA432292BA095007BFE08 /* MakeItGreat */ = {
 			isa = PBXGroup;
 			children = (
+				FC88ED4829362B2200B87685 /* Delegate */,
 				FC88ED442936296D00B87685 /* Json */,
 				FC88ED3B2936273700B87685 /* Utils */,
 				FC88ED3A2936270D00B87685 /* Protocol */,
 				FC88ED392936270000B87685 /* View */,
 				FC88ED37293626D100B87685 /* ViewController */,
 				FC88ED36293626C700B87685 /* Model */,
-				FC4DA433292BA095007BFE08 /* AppDelegate.swift */,
-				FC4DA435292BA095007BFE08 /* SceneDelegate.swift */,
 				FC4DA43C292BA097007BFE08 /* Assets.xcassets */,
 				FC4DA441292BA097007BFE08 /* Info.plist */,
 			);
@@ -182,6 +181,15 @@
 				FC88ED452936297900B87685 /* apagar.swift */,
 			);
 			path = Json;
+			sourceTree = "<group>";
+		};
+		FC88ED4829362B2200B87685 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				FC4DA435292BA095007BFE08 /* SceneDelegate.swift */,
+				FC4DA433292BA095007BFE08 /* AppDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
