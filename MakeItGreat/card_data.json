@@ -1,0 +1,82 @@
+{
+  "card": [
+    {
+      "id": "0",
+      "funcao": "instituicao",
+      "poder": "legislativo",
+      "descricao": "Tem função de propor leis e fiscalizar as ações tomadas pelo Poder Executivo.",
+      "titulo": "Legislativo"
+    },
+    {
+      "id": "1",
+      "funcao": "cargo",
+      "poder": "legislativo",
+      "descricao": "Elabora as Leis do Município, fiscalização e julgamento das contas do executivo e legislar sobre assuntos de interesse local.",
+      "titulo": "Vereador"
+    },
+    {
+      "id": "2",
+      "funcao": "cargo",
+      "poder": "legislativo",
+      "descricao": "Atua como representante da população no Legislativo estadual.",
+      "titulo": "Deputado Estadual"
+    },
+    {
+      "id": "3",
+      "funcao": "cargo",
+      "poder": "legislativo",
+      "descricao": "Propõe leis para o país e fiscalizar o Executivo, solicitando informações ou abrindo investigações quando necessário.",
+      "titulo": "Deputado Federal"
+    },
+    {
+      "id": "4",
+      "funcao": "cargo",
+      "poder": "legislativo",
+      "descricao": "Através do voto majoritário, são eleitos e exercem seus cargos para mandatos de oito anos.",
+      "titulo": "Senadores"
+    },
+    {
+      "id": "5",
+      "funcao": "instituicao",
+      "poder": "judiciario",
+      "descricao": "É o poder que tem a função de garantir o respeito aos direitos dos cidadãos brasileiros, impondo punições para aqueles que cometem delitos e resolver conflitos",
+      "titulo": "Poder Judiciario"
+    },
+    {
+      "id": "6",
+      "funcao": "cargo",
+      "poder": "judiciario",
+      "descricao": "Possui controle da constitucionalidade das leis.",
+      "titulo": "Supremo Tribunal Federal"
+    },
+    {
+      "id": "7",
+      "funcao": "instituicao",
+      "poder": "executivo",
+      "descricao": "É representado por aqueles eleitos para governar em nosso país, e têm como função de executar com o dinheiro público as leis.",
+      "titulo": "Poder Executivo"
+    },
+    {
+      "id": "8",
+      "funcao": "cargo",
+      "poder": "executivo",
+      "descricao": "Chefe do Poder Executivo municipal.",
+      "titulo": "Prefeito"
+    },
+    {
+      "id": "9",
+      "funcao": "cargo",
+      "poder": "executivo",
+      "descricao": "Executa as leis de um Estado",
+      "titulo": "Governador"
+    },
+    {
+      "id": "10",
+      "funcao": "cargo",
+      "poder": "executivo",
+      "descricao": "O presidente da República é a autoridade máxima do Brasil e também o chefe do Executivo.",
+      "titulo": "Presidente"
+    }
+  ]
+}
+
