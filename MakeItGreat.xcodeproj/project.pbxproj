@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FC4DA434292BA095007BFE08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA433292BA095007BFE08 /* AppDelegate.swift */; };
 		FC4DA436292BA095007BFE08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA435292BA095007BFE08 /* SceneDelegate.swift */; };
-		FC4DA438292BA095007BFE08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA437292BA095007BFE08 /* ViewController.swift */; };
+		FC4DA438292BA095007BFE08 /* MainCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA437292BA095007BFE08 /* MainCardsView.swift */; };
 		FC4DA43D292BA097007BFE08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC4DA43C292BA097007BFE08 /* Assets.xcassets */; };
 		FC4DA44B292BA097007BFE08 /* MakeItGreatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA44A292BA097007BFE08 /* MakeItGreatTests.swift */; };
 		FC4DA455292BA097007BFE08 /* MakeItGreatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA454292BA097007BFE08 /* MakeItGreatUITests.swift */; };
@@ -17,8 +17,9 @@
 		FC88ED3D293627A000B87685 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC88ED3C293627A000B87685 /* Util.swift */; };
 		FC88ED3F293627E200B87685 /* ViewCodeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC88ED3E293627E200B87685 /* ViewCodeConfiguration.swift */; };
 		FC88ED412936287000B87685 /* apagar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC88ED402936287000B87685 /* apagar.swift */; };
-		FC88ED43293628D300B87685 /* apagar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC88ED42293628D300B87685 /* apagar.swift */; };
-		FC88ED462936297900B87685 /* apagar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC88ED452936297900B87685 /* apagar.swift */; };
+		FC88ED4A2936326100B87685 /* MainCardsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC88ED492936326100B87685 /* MainCardsController.swift */; };
+		FC88ED4C2936343F00B87685 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC88ED4B2936343F00B87685 /* CollectionViewCell.swift */; };
+		FC88ED4E29363DD900B87685 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC88ED4D29363DD900B87685 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,7 @@
 		FC4DA430292BA095007BFE08 /* MakeItGreat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeItGreat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4DA433292BA095007BFE08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC4DA435292BA095007BFE08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FC4DA437292BA095007BFE08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC4DA437292BA095007BFE08 /* MainCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardsView.swift; sourceTree = "<group>"; };
 		FC4DA43C292BA097007BFE08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC4DA441292BA097007BFE08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC4DA446292BA097007BFE08 /* MakeItGreatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeItGreatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,8 +54,9 @@
 		FC88ED3C293627A000B87685 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		FC88ED3E293627E200B87685 /* ViewCodeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeConfiguration.swift; sourceTree = "<group>"; };
 		FC88ED402936287000B87685 /* apagar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apagar.swift; sourceTree = "<group>"; };
-		FC88ED42293628D300B87685 /* apagar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apagar.swift; sourceTree = "<group>"; };
-		FC88ED452936297900B87685 /* apagar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apagar.swift; sourceTree = "<group>"; };
+		FC88ED492936326100B87685 /* MainCardsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardsController.swift; sourceTree = "<group>"; };
+		FC88ED4B2936343F00B87685 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		FC88ED4D29363DD900B87685 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				FC88ED36293626C700B87685 /* Model */,
 				FC4DA43C292BA097007BFE08 /* Assets.xcassets */,
 				FC4DA441292BA097007BFE08 /* Info.plist */,
+				FC88ED4B2936343F00B87685 /* CollectionViewCell.swift */,
 			);
 			path = MakeItGreat;
 			sourceTree = "<group>";
@@ -146,7 +149,7 @@
 		FC88ED37293626D100B87685 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				FC4DA437292BA095007BFE08 /* ViewController.swift */,
+				FC88ED492936326100B87685 /* MainCardsController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -154,7 +157,7 @@
 		FC88ED392936270000B87685 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FC88ED42293628D300B87685 /* apagar.swift */,
+				FC4DA437292BA095007BFE08 /* MainCardsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,7 +181,7 @@
 		FC88ED442936296D00B87685 /* Json */ = {
 			isa = PBXGroup;
 			children = (
-				FC88ED452936297900B87685 /* apagar.swift */,
+				FC88ED4D29363DD900B87685 /* File.swift */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -343,12 +346,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC88ED3F293627E200B87685 /* ViewCodeConfiguration.swift in Sources */,
-				FC4DA438292BA095007BFE08 /* ViewController.swift in Sources */,
-				FC88ED43293628D300B87685 /* apagar.swift in Sources */,
-				FC88ED462936297900B87685 /* apagar.swift in Sources */,
+				FC4DA438292BA095007BFE08 /* MainCardsView.swift in Sources */,
+				FC88ED4C2936343F00B87685 /* CollectionViewCell.swift in Sources */,
+				FC88ED4A2936326100B87685 /* MainCardsController.swift in Sources */,
 				FC4DA434292BA095007BFE08 /* AppDelegate.swift in Sources */,
 				FC88ED412936287000B87685 /* apagar.swift in Sources */,
 				FC4DA436292BA095007BFE08 /* SceneDelegate.swift in Sources */,
+				FC88ED4E29363DD900B87685 /* File.swift in Sources */,
 				FC88ED3D293627A000B87685 /* Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,7 +605,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V7A578M95D;
-				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasbrbs.MakeItGreatUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -619,7 +622,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V7A578M95D;
-				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasbrbs.MakeItGreatUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
