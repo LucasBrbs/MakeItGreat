@@ -14,6 +14,20 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    
 }
 
+extension ViewController: ViewCodeConfiguration {
+    func buildHierarchy() {
+        print("")
+    }
+    
+    func setupConstraints() {
+        print("")
+    }
+    
+    func configureViews() {
+        print("")
+    }
+    
+}
