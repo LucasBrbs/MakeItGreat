@@ -4,10 +4,10 @@
 //
 //  Created by Lucas Barbosa de Oliveira on 21/11/22.
 //
-
+	
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {	
 
     var window: UIWindow?
 
@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = UINavigationController(rootViewController: ViewController())
+        window.rootViewController = UINavigationController(rootViewController: MainController())
         window.makeKeyAndVisible()
         self.window = window
     }
