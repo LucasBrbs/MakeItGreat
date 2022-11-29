@@ -1,8 +1,8 @@
 import UIKit
 
-class MainController: UIViewController {
+class MainCardsController: UIViewController {
 
-    let mainView = MainView()
+    let mainView = MainCardsView()
     override func loadView() {
         view = mainView
     }

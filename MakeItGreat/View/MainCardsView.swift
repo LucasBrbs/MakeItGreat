@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainView: UIView {
+class MainCardsView: UIView {
     private var cont:Int = 0
     
     lazy var collectionView = make(UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())) {
@@ -42,7 +42,7 @@ class MainView: UIView {
 
 }
 
-extension MainView: ViewCodeConfiguration {
+extension MainCardsView: ViewCodeConfiguration {
     func buildHierarchy() {
         self.addSubview(collectionView)
     }
@@ -63,7 +63,7 @@ extension MainView: ViewCodeConfiguration {
 }
 
 
-extension MainView: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource,UICollectionViewDelegate{
+extension MainCardsView: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource,UICollectionViewDelegate{
     
         
     
