@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360087CD29379D9600CBD8CE /* CardModelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360087CC29379D9600CBD8CE /* CardModelList.swift */; };
+		36FCB4812937774600C9BA05 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FCB4802937774600C9BA05 /* CardView.swift */; };
+		36FCB4832937776400C9BA05 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FCB4822937776400C9BA05 /* CardViewController.swift */; };
+		36FCB48529377A4400C9BA05 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FCB48429377A4400C9BA05 /* CardModel.swift */; };
+		36FCB4872937822800C9BA05 /* CardPlacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FCB4862937822800C9BA05 /* CardPlacerView.swift */; };
 		B99355AB293654CA00AE1038 /* quiz_data.json in Sources */ = {isa = PBXBuildFile; fileRef = B99355A9293654CA00AE1038 /* quiz_data.json */; };
 		B99355AC293654CA00AE1038 /* card_data.json in Sources */ = {isa = PBXBuildFile; fileRef = B99355AA293654CA00AE1038 /* card_data.json */; };
 		B99355AD2936551100AE1038 /* JsonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99355A8293654B800AE1038 /* JsonManager.swift */; };
@@ -17,10 +22,6 @@
 		B99355B72936930300AE1038 /* QuizList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99355B62936930300AE1038 /* QuizList.swift */; };
 		B99355BA2936958D00AE1038 /* LoadJsonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99355B92936958D00AE1038 /* LoadJsonTests.swift */; };
 		B99355BF2936987C00AE1038 /* quiz_mock.json in Resources */ = {isa = PBXBuildFile; fileRef = B99355BE2936987C00AE1038 /* quiz_mock.json */; };
-		36FCB4812937774600C9BA05 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FCB4802937774600C9BA05 /* CardView.swift */; };
-		36FCB4832937776400C9BA05 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FCB4822937776400C9BA05 /* CardViewController.swift */; };
-		36FCB48529377A4400C9BA05 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FCB48429377A4400C9BA05 /* CardModel.swift */; };
-		36FCB4872937822800C9BA05 /* CardPlacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FCB4862937822800C9BA05 /* CardPlacerView.swift */; };
 		FC4DA434292BA095007BFE08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA433292BA095007BFE08 /* AppDelegate.swift */; };
 		FC4DA436292BA095007BFE08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA435292BA095007BFE08 /* SceneDelegate.swift */; };
 		FC4DA438292BA095007BFE08 /* MainCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA437292BA095007BFE08 /* MainCardsView.swift */; };
@@ -43,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		360087CC29379D9600CBD8CE /* CardModelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModelList.swift; sourceTree = "<group>"; };
+		36FCB4802937774600C9BA05 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		36FCB4822937776400C9BA05 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		36FCB48429377A4400C9BA05 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		36FCB4862937822800C9BA05 /* CardPlacerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlacerView.swift; sourceTree = "<group>"; };
 		B99355A8293654B800AE1038 /* JsonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManager.swift; sourceTree = "<group>"; };
 		B99355A9293654CA00AE1038 /* quiz_data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = quiz_data.json; sourceTree = "<group>"; };
 		B99355AA293654CA00AE1038 /* card_data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = card_data.json; sourceTree = "<group>"; };
@@ -51,10 +57,6 @@
 		B99355B62936930300AE1038 /* QuizList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizList.swift; sourceTree = "<group>"; };
 		B99355B92936958D00AE1038 /* LoadJsonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJsonTests.swift; sourceTree = "<group>"; };
 		B99355BE2936987C00AE1038 /* quiz_mock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = quiz_mock.json; sourceTree = "<group>"; };
-		36FCB4802937774600C9BA05 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		36FCB4822937776400C9BA05 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
-		36FCB48429377A4400C9BA05 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
-		36FCB4862937822800C9BA05 /* CardPlacerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlacerView.swift; sourceTree = "<group>"; };
 		FC4DA430292BA095007BFE08 /* MakeItGreat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeItGreat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4DA433292BA095007BFE08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC4DA435292BA095007BFE08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				B99355B029366A4D00AE1038 /* Quiz.swift */,
 				B99355B62936930300AE1038 /* QuizList.swift */,
 				36FCB48429377A4400C9BA05 /* CardModel.swift */,
+				360087CC29379D9600CBD8CE /* CardModelList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				B99355B129366A4D00AE1038 /* Quiz.swift in Sources */,
 				B99355B72936930300AE1038 /* QuizList.swift in Sources */,
 				FC4DA436292BA095007BFE08 /* SceneDelegate.swift in Sources */,
+				360087CD29379D9600CBD8CE /* CardModelList.swift in Sources */,
 				36FCB4832937776400C9BA05 /* CardViewController.swift in Sources */,
 				FC88ED4E29363DD900B87685 /* File.swift in Sources */,
 				FC88ED3D293627A000B87685 /* Util.swift in Sources */,

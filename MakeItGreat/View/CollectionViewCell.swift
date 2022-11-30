@@ -53,7 +53,7 @@ public class CollectionViewCell: UICollectionViewCell {
         self.backgroundColor = .systemBackground
         self.configConstraints()
 
-        cardScreen.configure(model: <#T##CardModel#>)
+//        cardScreen.configure(model: <#T##CardModel#>)
 
     }
     

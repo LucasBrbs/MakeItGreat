@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CardModel {
+struct CardModel: Codable {
     let id: String
     let funcao: String
     let poder: String
