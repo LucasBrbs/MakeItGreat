@@ -9,6 +9,8 @@ import UIKit
 
 class QuizView: UIView {
 
+    var didTapAnswer: ((_ answer: Bool) -> Void)?
+
     private lazy var textQuestion = make(UILabel()) {
         $0.layer.masksToBounds = true
         $0.layer.cornerRadius = 15
@@ -21,10 +23,12 @@ class QuizView: UIView {
     }
 
     private lazy var trueButton = make(QuizButton()) {
+        $0.addTarget(self, action: #selector(trueAnswer), for: .touchUpInside)
         $0.textButton = "Verdadeiro"
     }
 
     private lazy var falseButton = make(QuizButton()) {
+        $0.addTarget(self, action: #selector(falseAnswer), for: .touchUpInside)
         $0.textButton = "Falso"
     }
 
@@ -37,8 +41,16 @@ class QuizView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configureView() {
-        textQuestion.text = "Testando"
+    func configureView(model: Quiz) {
+        textQuestion.text = model.question.textQuestion
+    }
+
+    @objc func trueAnswer() {
+        didTapAnswer?(true)
+    }
+
+    @objc func falseAnswer() {
+        didTapAnswer?(false)
     }
 
 }
@@ -46,7 +58,6 @@ class QuizView: UIView {
 extension QuizView: ViewCodeConfiguration {
 
     func buildHierarchy() {
-        //
         addSubview(textQuestion)
         addSubview(trueButton)
         addSubview(falseButton)
@@ -73,5 +84,4 @@ extension QuizView: ViewCodeConfiguration {
     func configureViews() {
         self.backgroundColor = .systemBackground
     }
-
 }

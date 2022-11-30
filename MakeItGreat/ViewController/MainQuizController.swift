@@ -10,6 +10,7 @@ import UIKit
 class MainQuizController: UIViewController {
 
     let quizView = QuizView()
+    var quizList =  QuizList(quiz: [])
 
     override func loadView() {
         view = quizView
@@ -17,6 +18,19 @@ class MainQuizController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        quizView.configureView()
+        self.quizList = loadQuiz()
+        quizView.configureView(model: quizList.quiz[0])
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        quizView.didTapAnswer = { [weak self] answer in
+            let validateAnswer = self?.quizList.quiz[0].validateAnswer(answer: answer)
+            print(validateAnswer!)
+        }
+    }
+
+    func loadQuiz() -> QuizList {
+        guard let data: QuizList = JsonManager.loadJson(path: "quiz_data") else { return QuizList(quiz: [])}
+        return data
     }
 }

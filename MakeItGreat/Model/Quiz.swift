@@ -15,4 +15,13 @@ struct Quiz: Codable {
         case id
         case question = "questao"
     }
+
+    func validateAnswer(answer: Bool) -> Bool {
+        if Bool(question.correctAnswer)! == answer {
+            print("Acerto")
+            return true
+        }
+        print("Errou")
+        return false
+    }
 }
