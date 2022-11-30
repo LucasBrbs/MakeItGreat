@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36FCB4812937774600C9BA05 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FCB4802937774600C9BA05 /* CardView.swift */; };
+		36FCB4832937776400C9BA05 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FCB4822937776400C9BA05 /* CardViewController.swift */; };
+		36FCB48529377A4400C9BA05 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FCB48429377A4400C9BA05 /* CardModel.swift */; };
+		36FCB4872937822800C9BA05 /* CardPlacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FCB4862937822800C9BA05 /* CardPlacerView.swift */; };
 		FC4DA434292BA095007BFE08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA433292BA095007BFE08 /* AppDelegate.swift */; };
 		FC4DA436292BA095007BFE08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA435292BA095007BFE08 /* SceneDelegate.swift */; };
 		FC4DA438292BA095007BFE08 /* MainCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA437292BA095007BFE08 /* MainCardsView.swift */; };
@@ -16,7 +20,6 @@
 		FC4DA457292BA097007BFE08 /* MakeItGreatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA456292BA097007BFE08 /* MakeItGreatUITestsLaunchTests.swift */; };
 		FC88ED3D293627A000B87685 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC88ED3C293627A000B87685 /* Util.swift */; };
 		FC88ED3F293627E200B87685 /* ViewCodeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC88ED3E293627E200B87685 /* ViewCodeConfiguration.swift */; };
-		FC88ED412936287000B87685 /* apagar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC88ED402936287000B87685 /* apagar.swift */; };
 		FC88ED4A2936326100B87685 /* MainCardsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC88ED492936326100B87685 /* MainCardsController.swift */; };
 		FC88ED4C2936343F00B87685 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC88ED4B2936343F00B87685 /* CollectionViewCell.swift */; };
 		FC88ED4E29363DD900B87685 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC88ED4D29363DD900B87685 /* File.swift */; };
@@ -40,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36FCB4802937774600C9BA05 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		36FCB4822937776400C9BA05 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		36FCB48429377A4400C9BA05 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		36FCB4862937822800C9BA05 /* CardPlacerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlacerView.swift; sourceTree = "<group>"; };
 		FC4DA430292BA095007BFE08 /* MakeItGreat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeItGreat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4DA433292BA095007BFE08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC4DA435292BA095007BFE08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,7 +60,6 @@
 		FC4DA456292BA097007BFE08 /* MakeItGreatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeItGreatUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FC88ED3C293627A000B87685 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		FC88ED3E293627E200B87685 /* ViewCodeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeConfiguration.swift; sourceTree = "<group>"; };
-		FC88ED402936287000B87685 /* apagar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apagar.swift; sourceTree = "<group>"; };
 		FC88ED492936326100B87685 /* MainCardsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardsController.swift; sourceTree = "<group>"; };
 		FC88ED4B2936343F00B87685 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		FC88ED4D29363DD900B87685 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
@@ -116,7 +122,6 @@
 				FC88ED36293626C700B87685 /* Model */,
 				FC4DA43C292BA097007BFE08 /* Assets.xcassets */,
 				FC4DA441292BA097007BFE08 /* Info.plist */,
-				FC88ED4B2936343F00B87685 /* CollectionViewCell.swift */,
 			);
 			path = MakeItGreat;
 			sourceTree = "<group>";
@@ -141,7 +146,7 @@
 		FC88ED36293626C700B87685 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FC88ED402936287000B87685 /* apagar.swift */,
+				36FCB48429377A4400C9BA05 /* CardModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				FC88ED492936326100B87685 /* MainCardsController.swift */,
+				36FCB4822937776400C9BA05 /* CardViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -158,6 +164,9 @@
 			isa = PBXGroup;
 			children = (
 				FC4DA437292BA095007BFE08 /* MainCardsView.swift */,
+				36FCB4802937774600C9BA05 /* CardView.swift */,
+				36FCB4862937822800C9BA05 /* CardPlacerView.swift */,
+				FC88ED4B2936343F00B87685 /* CollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -336,7 +345,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "#export PATH=\"$PATH:/opt/homebrew/bin\"\n#if which swiftlint > /dev/null; then\n#  swiftlint\n#else\n#  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n#fi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -346,12 +355,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC88ED3F293627E200B87685 /* ViewCodeConfiguration.swift in Sources */,
+				36FCB48529377A4400C9BA05 /* CardModel.swift in Sources */,
 				FC4DA438292BA095007BFE08 /* MainCardsView.swift in Sources */,
+				36FCB4872937822800C9BA05 /* CardPlacerView.swift in Sources */,
 				FC88ED4C2936343F00B87685 /* CollectionViewCell.swift in Sources */,
 				FC88ED4A2936326100B87685 /* MainCardsController.swift in Sources */,
+				36FCB4812937774600C9BA05 /* CardView.swift in Sources */,
 				FC4DA434292BA095007BFE08 /* AppDelegate.swift in Sources */,
-				FC88ED412936287000B87685 /* apagar.swift in Sources */,
 				FC4DA436292BA095007BFE08 /* SceneDelegate.swift in Sources */,
+				36FCB4832937776400C9BA05 /* CardViewController.swift in Sources */,
 				FC88ED4E29363DD900B87685 /* File.swift in Sources */,
 				FC88ED3D293627A000B87685 /* Util.swift in Sources */,
 			);
@@ -518,6 +530,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -545,6 +558,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

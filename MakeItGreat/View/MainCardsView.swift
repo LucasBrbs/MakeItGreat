@@ -8,8 +8,10 @@
 import UIKit
 
 class MainCardsView: UIView {
+
     private var cont:Int = 0
-    
+    var didTapOnButtonHandler: (() -> Void)?
+
     lazy var collectionView = make(UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())) {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.backgroundColor = .systemBackground
@@ -75,6 +77,7 @@ extension MainCardsView: UICollectionViewDelegateFlowLayout, UICollectionViewDat
         } else { }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as? CollectionViewCell
+        
         cell?.configureSide(indexPath: indexPath)
                 
         return cell ?? UICollectionViewCell()
@@ -89,6 +92,16 @@ extension MainCardsView: UICollectionViewDelegateFlowLayout, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
     return 0.0
         }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        didTapOnButtonHandler?()
+        if(indexPath.row == 1) {
+            print("aaaa")
+        } else {
+            print("bbbbb")
+
+        }
+    }
     
     
 
