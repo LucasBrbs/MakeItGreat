@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B99355C529377B1000AE1038 /* MainQuizController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99355C429377B1000AE1038 /* MainQuizController.swift */; };
+		B99355C729377BBA00AE1038 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99355C629377BBA00AE1038 /* QuizView.swift */; };
 		FC4DA434292BA095007BFE08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA433292BA095007BFE08 /* AppDelegate.swift */; };
 		FC4DA436292BA095007BFE08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA435292BA095007BFE08 /* SceneDelegate.swift */; };
 		FC4DA438292BA095007BFE08 /* MainCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA437292BA095007BFE08 /* MainCardsView.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B99355C429377B1000AE1038 /* MainQuizController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuizController.swift; sourceTree = "<group>"; };
+		B99355C629377BBA00AE1038 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		FC4DA430292BA095007BFE08 /* MakeItGreat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeItGreat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4DA433292BA095007BFE08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC4DA435292BA095007BFE08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				FC88ED492936326100B87685 /* MainCardsController.swift */,
+				B99355C429377B1000AE1038 /* MainQuizController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				FC4DA437292BA095007BFE08 /* MainCardsView.swift */,
+				B99355C629377BBA00AE1038 /* QuizView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -347,11 +353,13 @@
 			files = (
 				FC88ED3F293627E200B87685 /* ViewCodeConfiguration.swift in Sources */,
 				FC4DA438292BA095007BFE08 /* MainCardsView.swift in Sources */,
+				B99355C729377BBA00AE1038 /* QuizView.swift in Sources */,
 				FC88ED4C2936343F00B87685 /* CollectionViewCell.swift in Sources */,
 				FC88ED4A2936326100B87685 /* MainCardsController.swift in Sources */,
 				FC4DA434292BA095007BFE08 /* AppDelegate.swift in Sources */,
 				FC88ED412936287000B87685 /* apagar.swift in Sources */,
 				FC4DA436292BA095007BFE08 /* SceneDelegate.swift in Sources */,
+				B99355C529377B1000AE1038 /* MainQuizController.swift in Sources */,
 				FC88ED4E29363DD900B87685 /* File.swift in Sources */,
 				FC88ED3D293627A000B87685 /* Util.swift in Sources */,
 			);
@@ -511,13 +519,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V7A578M95D;
+				DEVELOPMENT_TEAM = 949BRFMFQG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MakeItGreat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -538,13 +547,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V7A578M95D;
+				DEVELOPMENT_TEAM = 949BRFMFQG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MakeItGreat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -567,7 +577,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V7A578M95D;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasbrbs.MakeItGreatTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -587,7 +597,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V7A578M95D;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasbrbs.MakeItGreatTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -605,6 +615,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V7A578M95D;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasbrbs.MakeItGreatUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -622,6 +633,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V7A578M95D;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasbrbs.MakeItGreatUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
