@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360087CD29379D9600CBD8CE /* CardModelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360087CC29379D9600CBD8CE /* CardModelList.swift */; };
+		36FCB4812937774600C9BA05 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FCB4802937774600C9BA05 /* CardView.swift */; };
+		36FCB4832937776400C9BA05 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FCB4822937776400C9BA05 /* CardViewController.swift */; };
+		36FCB48529377A4400C9BA05 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FCB48429377A4400C9BA05 /* CardModel.swift */; };
+		36FCB4872937822800C9BA05 /* CardPlacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FCB4862937822800C9BA05 /* CardPlacerView.swift */; };
 		B99355AB293654CA00AE1038 /* quiz_data.json in Sources */ = {isa = PBXBuildFile; fileRef = B99355A9293654CA00AE1038 /* quiz_data.json */; };
 		B99355AC293654CA00AE1038 /* card_data.json in Sources */ = {isa = PBXBuildFile; fileRef = B99355AA293654CA00AE1038 /* card_data.json */; };
 		B99355AD2936551100AE1038 /* JsonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99355A8293654B800AE1038 /* JsonManager.swift */; };
@@ -39,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		360087CC29379D9600CBD8CE /* CardModelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModelList.swift; sourceTree = "<group>"; };
+		36FCB4802937774600C9BA05 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		36FCB4822937776400C9BA05 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		36FCB48429377A4400C9BA05 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		36FCB4862937822800C9BA05 /* CardPlacerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlacerView.swift; sourceTree = "<group>"; };
 		B99355A8293654B800AE1038 /* JsonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManager.swift; sourceTree = "<group>"; };
 		B99355A9293654CA00AE1038 /* quiz_data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = quiz_data.json; sourceTree = "<group>"; };
 		B99355AA293654CA00AE1038 /* card_data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = card_data.json; sourceTree = "<group>"; };
@@ -137,7 +147,6 @@
 				B99355A9293654CA00AE1038 /* quiz_data.json */,
 				B99355AA293654CA00AE1038 /* card_data.json */,
 				FC4DA441292BA097007BFE08 /* Info.plist */,
-				FC88ED4B2936343F00B87685 /* CollectionViewCell.swift */,
 			);
 			path = MakeItGreat;
 			sourceTree = "<group>";
@@ -156,6 +165,8 @@
 				B99355AE29366A3F00AE1038 /* Question.swift */,
 				B99355B029366A4D00AE1038 /* Quiz.swift */,
 				B99355B62936930300AE1038 /* QuizList.swift */,
+				36FCB48429377A4400C9BA05 /* CardModel.swift */,
+				360087CC29379D9600CBD8CE /* CardModelList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				FC88ED492936326100B87685 /* MainCardsController.swift */,
+				36FCB4822937776400C9BA05 /* CardViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -172,6 +184,9 @@
 			isa = PBXGroup;
 			children = (
 				FC4DA437292BA095007BFE08 /* MainCardsView.swift */,
+				36FCB4802937774600C9BA05 /* CardView.swift */,
+				36FCB4862937822800C9BA05 /* CardPlacerView.swift */,
+				FC88ED4B2936343F00B87685 /* CollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -323,7 +338,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "#export PATH=\"$PATH:/opt/homebrew/bin\"\n#if which swiftlint > /dev/null; then\n#  swiftlint\n#else\n#  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n#fi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -337,13 +352,18 @@
 				B99355AB293654CA00AE1038 /* quiz_data.json in Sources */,
 				B99355AC293654CA00AE1038 /* card_data.json in Sources */,
 				FC88ED3F293627E200B87685 /* ViewCodeConfiguration.swift in Sources */,
+				36FCB48529377A4400C9BA05 /* CardModel.swift in Sources */,
 				FC4DA438292BA095007BFE08 /* MainCardsView.swift in Sources */,
+				36FCB4872937822800C9BA05 /* CardPlacerView.swift in Sources */,
 				FC88ED4C2936343F00B87685 /* CollectionViewCell.swift in Sources */,
 				FC88ED4A2936326100B87685 /* MainCardsController.swift in Sources */,
+				36FCB4812937774600C9BA05 /* CardView.swift in Sources */,
 				FC4DA434292BA095007BFE08 /* AppDelegate.swift in Sources */,
 				B99355B129366A4D00AE1038 /* Quiz.swift in Sources */,
 				B99355B72936930300AE1038 /* QuizList.swift in Sources */,
 				FC4DA436292BA095007BFE08 /* SceneDelegate.swift in Sources */,
+				360087CD29379D9600CBD8CE /* CardModelList.swift in Sources */,
+				36FCB4832937776400C9BA05 /* CardViewController.swift in Sources */,
 				FC88ED4E29363DD900B87685 /* File.swift in Sources */,
 				FC88ED3D293627A000B87685 /* Util.swift in Sources */,
 			);
