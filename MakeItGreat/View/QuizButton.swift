@@ -32,14 +32,6 @@ class QuizButton: UIButton {
     override func draw(_ rect: CGRect) {
         self.layer.cornerRadius = cornerRadius
         self.layer.masksToBounds = true
-
-        if active {
-            setSelected()
-        } else {
-            setDeselected()
-        }
-
-        self.addTarget(self, action: #selector(onPress), for: .touchUpInside)
     }
 
     @objc func onPress() {
@@ -53,13 +45,12 @@ class QuizButton: UIButton {
     }
 
     func setSelected() {
-        self.setTitleColor(UIColor.systemGray6, for: .normal)
         self.backgroundColor = selectedColor
+        self.setTitleColor(UIColor.systemGray6, for: .normal)
     }
 
     func setDeselected() {
-        self.setTitleColor(UIColor.systemGray2, for: .normal)
         self.backgroundColor = deselectedColor
+        self.setTitleColor(UIColor.systemGray2, for: .normal)
     }
-
 }

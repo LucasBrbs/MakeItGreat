@@ -24,8 +24,12 @@ class MainQuizController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         quizView.didTapAnswer = { [weak self] answer in
-            let validateAnswer = self?.quizList.quiz[0].validateAnswer(answer: answer)
-            print(validateAnswer!)
+            guard let validateAnswer = self?.quizList.quiz[0].validateAnswer(answer: answer) else { return }
+            print(validateAnswer)
+            if validateAnswer {
+                self?.present(QuizAlerts.correctAnswer.showAlert(), animated: true, completion: nil)
+            }
+            self?.present(QuizAlerts.incorrectAnswer.showAlert(), animated: true, completion: nil)
         }
     }
 

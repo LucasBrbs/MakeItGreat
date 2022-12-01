@@ -47,10 +47,14 @@ class QuizView: UIView {
 
     @objc func trueAnswer() {
         didTapAnswer?(true)
+        falseButton.setDeselected()
+        trueButton.setSelected()
     }
 
     @objc func falseAnswer() {
         didTapAnswer?(false)
+        falseButton.setSelected()
+        trueButton.setDeselected()
     }
 
 }
