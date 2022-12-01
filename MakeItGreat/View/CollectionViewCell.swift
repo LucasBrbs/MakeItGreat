@@ -2,20 +2,19 @@ import UIKit
 
 public class CollectionViewCell: UICollectionViewCell {
     static let identifier: String = "CollectionViewCell"
+
     
-    let imageHeart: UIImageView = {
-        let heart: UIImageView = UIImageView(image: UIImage(named: "Rectangle"))
-        heart.translatesAutoresizingMaskIntoConstraints = false
-        heart.contentMode = .scaleToFill
-        
-        return heart
-    }()
-    
+    var cardScreen = make(CardView()) {
+        $0.layer.masksToBounds = true
+        $0.layer.cornerRadius = 7
+        $0.translatesAutoresizingMaskIntoConstraints = false
+
+    }
+
     let progressBar: UIImageView = {
         let progress: UIImageView = UIImageView(image: UIImage(named: "FrameBar"))
         progress.translatesAutoresizingMaskIntoConstraints = false
         progress.contentMode = .scaleToFill
-        
         return progress
     }()
     
@@ -33,6 +32,14 @@ public class CollectionViewCell: UICollectionViewCell {
     }
     
     func configureSide(indexPath: IndexPath) {
+        guard let resources: CardModelList = JsonManager.loadJson(path: "card_data") else { return }
+
+        print(resources.card[indexPath.row].titulo)
+
+        var cardsSequence = resources.card[indexPath.row]
+
+        cardScreen.configure(model: CardModel(id: cardsSequence.id, funcao: cardsSequence.funcao, poder: cardsSequence.poder, descricao: cardsSequence.descricao, titulo: cardsSequence.titulo))
+
         if((indexPath.row)%2 == 0 ){
             self.cardRight()
         }
@@ -49,10 +56,15 @@ public class CollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.contentView.addSubview(self.imageHeart)
+        self.contentView.addSubview(self.cardScreen)
         self.contentView.addSubview(self.progressBar)
         self.backgroundColor = .systemBackground
         self.configConstraints()
+
+
+
+
+
     }
     
     required init?(coder: NSCoder) {
@@ -60,18 +72,18 @@ public class CollectionViewCell: UICollectionViewCell {
     }
     
     private func configConstraints() {
-        leadingAnchorConstraint =  imageHeart.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 50)
-        trailingAnchorConstraint = imageHeart.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -240)
+        leadingAnchorConstraint =  cardScreen.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 50)
+        trailingAnchorConstraint = cardScreen.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -240)
         NSLayoutConstraint.activate([
             leadingAnchorConstraint,
             trailingAnchorConstraint,
-            self.imageHeart.topAnchor.constraint(equalTo: self.topAnchor),
-            self.imageHeart.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            self.imageHeart.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            self.cardScreen.topAnchor.constraint(equalTo: self.topAnchor),
+            self.cardScreen.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            self.cardScreen.centerYAnchor.constraint(equalTo: self.centerYAnchor),
         ])
         NSLayoutConstraint.activate([
             self.progressBar.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            self.progressBar.centerYAnchor.constraint(equalTo: self.imageHeart.centerYAnchor),
+            self.progressBar.centerYAnchor.constraint(equalTo: self.cardScreen.centerYAnchor),
             self.progressBar.topAnchor.constraint(equalTo: self.topAnchor)
         ])
     }
