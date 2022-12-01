@@ -32,6 +32,14 @@ public class CollectionViewCell: UICollectionViewCell {
     }
     
     func configureSide(indexPath: IndexPath) {
+        guard let resources: CardModelList = JsonManager.loadJson(path: "card_data") else { return }
+
+        print(resources.card[indexPath.row].titulo)
+
+        var cardsSequence = resources.card[indexPath.row]
+
+        cardScreen.configure(model: CardModel(id: cardsSequence.id, funcao: cardsSequence.funcao, poder: cardsSequence.poder, descricao: cardsSequence.descricao, titulo: cardsSequence.titulo))
+
         if((indexPath.row)%2 == 0 ){
             self.cardRight()
         }
@@ -53,7 +61,9 @@ public class CollectionViewCell: UICollectionViewCell {
         self.backgroundColor = .systemBackground
         self.configConstraints()
 
-//        cardScreen.configure(model: <#T##CardModel#>)
+
+
+
 
     }
     
