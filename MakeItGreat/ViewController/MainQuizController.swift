@@ -8,6 +8,7 @@
 import UIKit
 
 class MainQuizController: UIViewController {
+    let indexQuiz = 8
 
     let quizView = QuizView()
     var quizList =  QuizList(quiz: [])
@@ -19,12 +20,12 @@ class MainQuizController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.quizList = loadQuiz()
-        quizView.configureView(model: quizList.quiz[0])
+        quizView.configureView(model: quizList.quiz[indexQuiz])
     }
 
     override func viewDidAppear(_ animated: Bool) {
         quizView.didTapAnswer = { [weak self] answer in
-            guard let validateAnswer = self?.quizList.quiz[0].validateAnswer(answer: answer) else { return }
+            guard let validateAnswer = self?.quizList.quiz[self!.indexQuiz].validateAnswer(answer: answer) else { return }
             print(validateAnswer)
             if validateAnswer {
                 self?.present(QuizAlerts.correctAnswer.showAlert(), animated: true, completion: nil)
