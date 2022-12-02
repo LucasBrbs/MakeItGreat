@@ -40,8 +40,6 @@ class MainCardsView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-
 }
 
 extension MainCardsView: ViewCodeConfiguration {
@@ -61,14 +59,10 @@ extension MainCardsView: ViewCodeConfiguration {
     func configureViews() {
         self.backgroundColor = .systemBackground
     }
-    
 }
 
-
 extension MainCardsView: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource,UICollectionViewDelegate{
-    
-        
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if(cont == 0){
@@ -82,6 +76,7 @@ extension MainCardsView: UICollectionViewDelegateFlowLayout, UICollectionViewDat
                 
         return cell ?? UICollectionViewCell()
     }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 11
     }
@@ -89,20 +84,18 @@ extension MainCardsView: UICollectionViewDelegateFlowLayout, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.frame.width, height: 150)
     }
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
     return 0.0
         }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         didTapOnButtonHandler?()
-        if(indexPath.row == 1) {
-            print("aaaa")
-        } else {
-            print("bbbbb")
-
-        }
+//        if(indexPath.row == 1) {
+//            print("aaaa")
+//        } else {
+//            print("bbbbb")
+//
+//        }
     }
-    
-    
-
 }

@@ -72,6 +72,7 @@ class CardView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         applyViewCode()
+        self.translatesAutoresizingMaskIntoConstraints = false
     }
 
     required init?(coder: NSCoder) {
@@ -146,7 +147,7 @@ extension CardView: ViewCodeConfiguration {
     }
 
     func configureViews() {
-        self.backgroundColor = .red
+        self.backgroundColor = .systemBackground
     }
 
 }
