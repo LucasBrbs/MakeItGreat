@@ -33,7 +33,6 @@ public class CollectionViewCell: UICollectionViewCell {
     
     func captureIndexPath(indexPath: IndexPath) {
         guard let resources: CardModelList = JsonManager.loadJson(path: "card_data") else { return }
-
         let cardsSequence = resources.card[indexPath.row]
 
         cardScreen.configure(model: CardModel(id: cardsSequence.id, funcao: cardsSequence.funcao, poder: cardsSequence.poder, descricao: cardsSequence.descricao, titulo: cardsSequence.titulo))
@@ -58,11 +57,6 @@ public class CollectionViewCell: UICollectionViewCell {
         self.contentView.addSubview(self.progressBar)
         self.backgroundColor = .systemBackground
         self.configConstraints()
-
-
-
-
-
     }
     
     required init?(coder: NSCoder) {

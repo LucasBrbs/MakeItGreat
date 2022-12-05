@@ -8,6 +8,7 @@
 import UIKit
 
 class CardPlacerView: UIView {
+    var didTapQuizButton: (() -> Void)?
     let cardView = CardView()
 
     lazy var buttonQuiz = make(UIButton()) {
@@ -22,6 +23,7 @@ class CardPlacerView: UIView {
         let quizController = MainQuizController()
         quizController.modalPresentationStyle = .fullScreen
         UIApplication.shared.keyWindow?.rootViewController = quizController
+
     }
 
     override init(frame: CGRect) {
@@ -40,10 +42,12 @@ extension CardPlacerView: ViewCodeConfiguration {
     func buildHierarchy() {
         addSubview(cardView)
         addSubview(buttonQuiz)
+
     }
 
     func setupConstraints() {
         NSLayoutConstraint.activate([
+            // card constraints
             cardView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             cardView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             cardView.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.5),
@@ -53,11 +57,11 @@ extension CardPlacerView: ViewCodeConfiguration {
             buttonQuiz.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 80),
             buttonQuiz.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor,constant: -80),
             buttonQuiz.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor,constant: -20)
-        ])
+            ])
     }
 
     func configureViews() {
-        cardView.translatesAutoresizingMaskIntoConstraints = false
+        cardView.layer.masksToBounds = true
         cardView.layer.cornerRadius = 15
     }
 
