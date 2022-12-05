@@ -78,7 +78,7 @@ extension MainCardsView: UICollectionViewDelegateFlowLayout, UICollectionViewDat
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as? CollectionViewCell
         
-        cell?.configureSide(indexPath: indexPath)
+        cell?.captureIndexPath(indexPath: indexPath)
                 
         return cell ?? UICollectionViewCell()
     }

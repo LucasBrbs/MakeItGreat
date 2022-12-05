@@ -23,6 +23,5 @@ class CardViewController: UIViewController {
     }
     func loadCards() {
         guard let resources: CardModelList = JsonManager.loadJson(path: "card_data") else { return }
-        print(resources.card[0].titulo)
     }
 }

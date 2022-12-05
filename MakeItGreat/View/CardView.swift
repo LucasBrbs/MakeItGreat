@@ -79,6 +79,7 @@ class CardView: UIView {
     }
 
     func configure(model: CardModel) {
+
         cardName.text =  model.titulo
         cardDescription.text = model.descricao
         pontuation.text = model.id

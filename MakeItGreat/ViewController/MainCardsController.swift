@@ -8,7 +8,6 @@ class MainCardsController: UIViewController {
     
     override func loadView() {
         view = mainView
-        mainView
         mainView.didTapOnButtonHandler = { [weak self] in
             let nextViewController = CardViewController()
             self?.navigationController?.pushViewController(nextViewController, animated: true)
@@ -21,6 +20,5 @@ class MainCardsController: UIViewController {
     }
     func loadDataFromJson() {
         guard let resources: QuizList = JsonManager.loadJson(path: "quiz_data") else { return }
-        print(resources.quiz[0].question.textQuestion)
     }
 }
