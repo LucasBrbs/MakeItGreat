@@ -73,6 +73,7 @@ class CardView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         applyViewCode()
+        self.translatesAutoresizingMaskIntoConstraints = false
     }
 
     required init?(coder: NSCoder) {
@@ -114,8 +115,8 @@ extension CardView: ViewCodeConfiguration {
             cardName.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             // card description constraints
             cardDescription.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 200 ),
-            cardDescription.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            cardDescription.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            cardDescription.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            cardDescription.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             // circle constraints
             circleDepartment.heightAnchor.constraint(equalToConstant: radius * 2),
             circleDepartment.widthAnchor.constraint(equalToConstant: radius * 2),
@@ -148,7 +149,7 @@ extension CardView: ViewCodeConfiguration {
     }
 
     func configureViews() {
-        self.backgroundColor = .red
+        self.backgroundColor = .systemBackground
     }
 
 }

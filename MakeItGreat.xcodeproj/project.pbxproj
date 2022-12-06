@@ -25,6 +25,7 @@
 		B99355BF2936987C00AE1038 /* quiz_mock.json in Resources */ = {isa = PBXBuildFile; fileRef = B99355BE2936987C00AE1038 /* quiz_mock.json */; };
 		B99355C529377B1000AE1038 /* MainQuizController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99355C429377B1000AE1038 /* MainQuizController.swift */; };
 		B99355C729377BBA00AE1038 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99355C629377BBA00AE1038 /* QuizView.swift */; };
+		B9AF2D02293A284E008BAA89 /* QuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF2D01293A284E008BAA89 /* QuizTests.swift */; };
 		B9FE45F1293782B700C6FCAB /* QuizButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE45F0293782B700C6FCAB /* QuizButton.swift */; };
 		B9FE45F32938D3F400C6FCAB /* QuizAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FE45F22938D3F400C6FCAB /* QuizAlerts.swift */; };
 		FC4DA434292BA095007BFE08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DA433292BA095007BFE08 /* AppDelegate.swift */; };
@@ -63,6 +64,7 @@
 		B99355BE2936987C00AE1038 /* quiz_mock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = quiz_mock.json; sourceTree = "<group>"; };
 		B99355C429377B1000AE1038 /* MainQuizController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQuizController.swift; sourceTree = "<group>"; };
 		B99355C629377BBA00AE1038 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		B9AF2D01293A284E008BAA89 /* QuizTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTests.swift; sourceTree = "<group>"; };
 		B9FE45F0293782B700C6FCAB /* QuizButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizButton.swift; sourceTree = "<group>"; };
 		B9FE45F22938D3F400C6FCAB /* QuizAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAlerts.swift; sourceTree = "<group>"; };
 		FC4DA430292BA095007BFE08 /* MakeItGreat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeItGreat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,14 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		B9AF2D00293A2839008BAA89 /* QuizTests */ = {
+			isa = PBXGroup;
+			children = (
+				B9AF2D01293A284E008BAA89 /* QuizTests.swift */,
+			);
+			path = QuizTests;
+			sourceTree = "<group>";
+		};
 		FC4DA427292BA095007BFE08 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +170,7 @@
 		FC4DA449292BA097007BFE08 /* MakeItGreatTests */ = {
 			isa = PBXGroup;
 			children = (
+				B9AF2D00293A2839008BAA89 /* QuizTests */,
 				B99355B82936957B00AE1038 /* ServiceTests */,
 			);
 			path = MakeItGreatTests;
@@ -393,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9AF2D02293A284E008BAA89 /* QuizTests.swift in Sources */,
 				B99355BA2936958D00AE1038 /* LoadJsonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,8 +546,8 @@
 				INFOPLIST_FILE = MakeItGreat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -544,9 +556,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasbrbs.MakeItGreat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -562,8 +577,8 @@
 				INFOPLIST_FILE = MakeItGreat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -572,9 +587,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasbrbs.MakeItGreat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
