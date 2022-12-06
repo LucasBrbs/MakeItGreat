@@ -9,6 +9,7 @@ import UIKit
 
 class CardPlacerView: UIView {
     var didTapQuizButton: (() -> Void)?
+
     let cardView = CardView()
 
     lazy var buttonQuiz = make(UIButton()) {
@@ -20,10 +21,7 @@ class CardPlacerView: UIView {
     }
 
     @objc func buttonAction(sender: UIButton!) {
-        let quizController = MainQuizController()
-        quizController.modalPresentationStyle = .fullScreen
-        UIApplication.shared.keyWindow?.rootViewController = quizController
-
+        didTapQuizButton?()
     }
 
     override init(frame: CGRect) {

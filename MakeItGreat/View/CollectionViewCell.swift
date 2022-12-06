@@ -3,6 +3,7 @@ import UIKit
 public class CollectionViewCell: UICollectionViewCell {
     static let identifier: String = "CollectionViewCell"
 
+
     
     var cardScreen = make(CardView()) {
         $0.layer.masksToBounds = true

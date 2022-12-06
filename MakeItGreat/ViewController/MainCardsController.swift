@@ -12,14 +12,13 @@ class MainCardsController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainView.didTapOnButtonHandler = { [weak self] in
-            let nextViewController = CardViewController()
+        mainView.didTapOnButtonHandler = { [weak self] item in
+            print(item)
+            let nextViewController = CardViewController(number: item)
             self?.navigationController?.pushViewController(nextViewController, animated: true)
         }
-        loadDataFromJson()
+
     }
 
-    func loadDataFromJson() {
-        guard let resources: QuizList = JsonManager.loadJson(path: "quiz_data") else { return }
-    }
+
 }
