@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class CardView: UIView {
 
@@ -84,6 +85,7 @@ class CardView: UIView {
         pontuation.text = model.id
         departmentIcon.image = UIImage(systemName: model.poder)
     }
+
 }
 
 extension CardView: ViewCodeConfiguration {
@@ -141,7 +143,7 @@ extension CardView: ViewCodeConfiguration {
             descriptionRectangle.centerXAnchor.constraint(equalTo: cardDescription.centerXAnchor),
             descriptionRectangle.centerYAnchor.constraint(equalTo: cardDescription.centerYAnchor),
             descriptionRectangle.heightAnchor.constraint(equalTo: cardDescription.heightAnchor, multiplier: 1.0),
-            descriptionRectangle.widthAnchor.constraint(equalTo: cardDescription.widthAnchor, multiplier: 1.0)
+            descriptionRectangle.widthAnchor.constraint(equalTo: cardDescription.widthAnchor, multiplier: 1.0),
         ])
     }
 
