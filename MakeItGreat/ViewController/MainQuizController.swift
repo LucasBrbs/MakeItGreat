@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import Lottie
 
 class MainQuizController: UIViewController {
-    let indexQuiz = 8
 
+    let indexQuiz = 8
     let quizView = QuizView()
     var quizList =  QuizList(quiz: [])
 
@@ -24,13 +25,19 @@ class MainQuizController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        quizView.popView = {[weak self] in
+            let nextViewController = CardViewController()
+            self?.navigationController?.pushViewController(nextViewController, animated: true)
+            // mudar depois para um pop
+        }
         quizView.didTapAnswer = { [weak self] answer in
             guard let validateAnswer = self?.quizList.quiz[self!.indexQuiz].validateAnswer(answer: answer) else { return }
             print(validateAnswer)
             if validateAnswer {
-                self?.present(QuizAlerts.correctAnswer.showAlert(), animated: true, completion: nil)
+                self?.quizView.setupLottieRight()
+            }else {
+                self?.quizView.setupLottieWrong()
             }
-            self?.present(QuizAlerts.incorrectAnswer.showAlert(), animated: true, completion: nil)
         }
     }
 

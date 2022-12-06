@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class CardView: UIView {
 
@@ -84,6 +85,7 @@ class CardView: UIView {
         pontuation.text = model.id
         departmentIcon.image = UIImage(systemName: model.poder)
     }
+
 }
 
 extension CardView: ViewCodeConfiguration {
