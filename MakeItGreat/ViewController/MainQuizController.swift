@@ -26,7 +26,7 @@ class MainQuizController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        quizView.didTapTeste = {[weak self] in
+        quizView.popView = {[weak self] in
             let nextViewController = CardViewController()
             self?.navigationController?.pushViewController(nextViewController, animated: true)
             // mudar depois para um pop

@@ -143,7 +143,7 @@ extension CardView: ViewCodeConfiguration {
             descriptionRectangle.centerXAnchor.constraint(equalTo: cardDescription.centerXAnchor),
             descriptionRectangle.centerYAnchor.constraint(equalTo: cardDescription.centerYAnchor),
             descriptionRectangle.heightAnchor.constraint(equalTo: cardDescription.heightAnchor, multiplier: 1.0),
-            descriptionRectangle.widthAnchor.constraint(equalTo: cardDescription.widthAnchor, multiplier: 1.0),
+            descriptionRectangle.widthAnchor.constraint(equalTo: cardDescription.widthAnchor, multiplier: 1.0)
         ])
     }
 

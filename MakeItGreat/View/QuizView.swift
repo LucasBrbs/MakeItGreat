@@ -12,7 +12,7 @@ class QuizView: UIView {
 
     var didTapAnswer: ((_ answer: Bool) -> Void)?
     let animationView = LottieAnimationView()
-    var didTapTeste: (() -> Void)?
+    var popView: (() -> Void)?
 
 
     private lazy var textQuestion = make(UILabel()) {
@@ -68,16 +68,13 @@ class QuizView: UIView {
         animationView.animationSpeed = 1.0
         animationView.play { _ in
             self.animationView.isHidden = true
-            self.didTapTeste?()
+            self.popView?()
         }
-
         NSLayoutConstraint.activate([
             animationView.heightAnchor.constraint(equalToConstant: 200),
             animationView.widthAnchor.constraint(equalToConstant: 200)
-
         ])
-
-        }
+    }
 
     func setupLottieWrong() {
         animationView.animation = LottieAnimation.named("wrong-lottie2")
@@ -86,14 +83,13 @@ class QuizView: UIView {
         animationView.animationSpeed = 1.0
         animationView.play { _ in
             self.animationView.isHidden = true
-            self.didTapTeste?()
+            self.popView?()
         }
         NSLayoutConstraint.activate([
             animationView.heightAnchor.constraint(equalToConstant: 150),
             animationView.widthAnchor.constraint(equalToConstant: 150)
-
         ])
-        }
+    }
 
 
 }
@@ -124,7 +120,7 @@ extension QuizView: ViewCodeConfiguration {
             falseButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             // constraints animation view
             animationView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 200),
-            animationView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            animationView.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }
 
