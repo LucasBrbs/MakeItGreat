@@ -90,6 +90,7 @@ extension MainCardsView: UICollectionViewDelegateFlowLayout, UICollectionViewDat
         }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // usar presenter para aparecer com a tela e o card animado no meio
         didTapOnButtonHandler?()
 //        if(indexPath.row == 1) {
 //            print("aaaa")

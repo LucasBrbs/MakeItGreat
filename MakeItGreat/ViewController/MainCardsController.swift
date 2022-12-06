@@ -2,7 +2,7 @@ import UIKit
 
 class MainCardsController: UIViewController {
     let mainView = MainCardsView()
-    let cardView = CardView()
+    let cardView = CardPlacerView()
 
     override func loadView() {
         view = mainView
@@ -12,14 +12,15 @@ class MainCardsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mainView.didTapOnButtonHandler = { [weak self] in
-            let nextViewController = CardViewController()
-            self?.navigationController?.pushViewController(nextViewController, animated: true)
+            let nav = UINavigationController(rootViewController: CardViewController())
+            nav.modalPresentationStyle = .overFullScreen
+            self?.present(nav, animated: false)
         }
-        loadDataFromJson()
     }
 
-    func loadDataFromJson() {
-        guard let resources: QuizList = JsonManager.loadJson(path: "quiz_data") else { return }
-        print(resources.quiz[0].question.textQuestion)
+    func loadDataFromJson() -> QuizList {
+        guard let resources: QuizList = JsonManager.loadJson(path: "quiz_data") else { return QuizList(quiz: []) }
+//        print(resources.quiz[0].question.textQuestion)
+        return resources
     }
 }
