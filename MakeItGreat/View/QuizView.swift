@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import Lottie
 
 class QuizView: UIView {
 
     var didTapAnswer: ((_ answer: Bool) -> Void)?
+    let animationView = LottieAnimationView()
+    var popView: (() -> Void)?
+
 
     private lazy var textQuestion = make(UILabel()) {
         $0.layer.masksToBounds = true
@@ -57,6 +61,37 @@ class QuizView: UIView {
         trueButton.setDeselected()
     }
 
+    func setupLottieRight() {
+        animationView.animation = LottieAnimation.named("right-lottie2")
+        animationView.translatesAutoresizingMaskIntoConstraints = false
+        animationView.contentMode = .scaleAspectFit
+        animationView.animationSpeed = 1.0
+        animationView.play { _ in
+            self.animationView.isHidden = true
+            self.popView?()
+        }
+        NSLayoutConstraint.activate([
+            animationView.heightAnchor.constraint(equalToConstant: 200),
+            animationView.widthAnchor.constraint(equalToConstant: 200)
+        ])
+    }
+
+    func setupLottieWrong() {
+        animationView.animation = LottieAnimation.named("wrong-lottie2")
+        animationView.translatesAutoresizingMaskIntoConstraints = false
+        animationView.contentMode = .scaleAspectFit
+        animationView.animationSpeed = 1.0
+        animationView.play { _ in
+            self.animationView.isHidden = true
+            self.popView?()
+        }
+        NSLayoutConstraint.activate([
+            animationView.heightAnchor.constraint(equalToConstant: 150),
+            animationView.widthAnchor.constraint(equalToConstant: 150)
+        ])
+    }
+
+
 }
 
 extension QuizView: ViewCodeConfiguration {
@@ -65,6 +100,7 @@ extension QuizView: ViewCodeConfiguration {
         addSubview(textQuestion)
         addSubview(trueButton)
         addSubview(falseButton)
+        addSubview(animationView)
     }
 
     func setupConstraints() {
@@ -81,7 +117,10 @@ extension QuizView: ViewCodeConfiguration {
             // constraints false button
             falseButton.topAnchor.constraint(equalTo: trueButton.bottomAnchor, constant: 15),
             falseButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8),
-            falseButton.centerXAnchor.constraint(equalTo: self.centerXAnchor)
+            falseButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            // constraints animation view
+            animationView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 200),
+            animationView.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }
 
