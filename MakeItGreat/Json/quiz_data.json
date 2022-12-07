@@ -1,35 +1,53 @@
 {
   "quiz": [
     {
-      "id": "0",
-      "questao": {
-        "ajuda": "O legislativo é responsável por legislar, isto é, propor leis, e também por fiscalizar as ações que são realizadas pelo governo, que compõe o Executivo. É limitado ao nível para o qual ele foi eleito. Uma lei proposta por um membro, se aprovada, só terá validade dentro do estado para o qual ela atua. O trabalho de fiscalização de um deputado também acontece no Poder Executivo.",
-        "resposta": "false",
-        "texto_pergunta": "Os membros estaduais do legislativo tem o poder de legislar para outros estados."
-      }
+        "id": "10",
+        "questao": {
+          "ajuda": "O Brasil é uma república presidencialista, portanto, o presidente da república, além de chefe de Estado, é chefe de governo. Assim, ele é a autoridade máxima de nossa nação, pois a representa internacionalmente e também pode tomar decisões concernentes ao governo dela.",
+          "resposta": "false",
+          "texto_pergunta": "O cargo de maior Poder Judiciário é o presidente?"
+        }
     },
     {
-      "id": "1",
-      "questao": {
-        "ajuda": "É de responsabilidade dos vereadores: Mandato de quatro (4) anos, Elaboração da Lei Orgânica do Município, Número de integrantes nas câmaras proporcional à população do município, Legislar sobre assuntos de interesse local.",
-        "resposta": "true",
-        "texto_pergunta": "O número de integrantes da câmara é proporcional à população?"
-      }
+        "id": "9",
+        "questao": {
+          "ajuda": "Governador é o cargo político que representa o poder da administração estadual e a representação do Estado em suas relações jurídicas, políticas e administrativas, defendendo seus interesses junto à Presidência e buscando investimentos e obras federais. O governador do Distrito Federal, por ser um caso singular (município neutro).",
+          "resposta": "true",
+          "texto_pergunta": "O governador trabalha junto com o presidente executando as leis?"
+        }
+
     },
     {
-      "id": "2",
-      "questao": {
-        "ajuda": "No caso do Distrito Federal os deputados são chamados de distritais, uma vez que o Distrito Federal não é um estado, mas, como o nome já diz, um distrito. Desse modo, os deputados distritais acumulam poderes de deputado estadual e de vereador, pois no Distrito Federal não ocorrem eleições para prefeitos e vereadores.",
-        "resposta": "true",
-        "texto_pergunta": "É possível os Deputados acumularem dois poderes?"
-      }
+        "id": "8",
+        "questao": {
+          "ajuda": "República Federativa do Brasil abre o precedente para certa independência administrativa, o que deixa a administração pública das cidades nas mãos do prefeito, como gestor executivo do município",
+          "resposta": "false",
+          "texto_pergunta": "O prefeito governa sozinho?"
+        }
+
     },
     {
-      "id": "3",
+        "id": "7",
+        "questao": {
+          "ajuda": "O Poder Executivo brasileiro é representado pelo presidente da república e seus ministros; pelo governador e seus secretários estaduais; e pelo prefeito e seus secretários municipais. Cada uma dessas funções corresponde aos níveis federal, estadual e municipal respectivamente.",
+          "resposta": "false",
+          "texto_pergunta": "Esse poder também é administrado pelo Presidente?"
+        }
+    },
+    {
+        "id": "6",
+        "questao": {
+          "ajuda": "Embora recebam essa denominação, o Supremo não é um ministério subordinado ao Executivo Federal. Por isso, os ministros do STF não estão na mesma hierarquia dos demais ministros de outras pastas",
+          "resposta": "true",
+          "texto_pergunta": "O STF pode julgar decisões do presidente  em âmbito político?"
+        }
+    },
+    {
+      "id": "5",
       "questao": {
-        "ajuda": "Eles também podem propor alterações na Constituição Federal por meio de uma emenda constitucional e decidir aprovar ou não a criação de uma lei baseada em uma Medida Provisória, emitida pelo presidente.",
+        "ajuda": "É o poder que tem a função de garantir o respeito aos direitos dos cidadãos brasileiros, impondo punições para aqueles que cometem delitos e resolver conflitos",
         "resposta": "true",
-        "texto_pergunta": "Os Deputados federais podem fiscalizar o poder executivo?"
+        "texto_pergunta": "Ele pode impor penas nos outros poderes? "
       }
     },
     {
@@ -41,51 +59,38 @@
       }
     },
     {
-      "id": "5",
+
+      "id": "3",
       "questao": {
-        "ajuda": "É o poder que tem a função de garantir o respeito aos direitos dos cidadãos brasileiros, impondo punições para aqueles que cometem delitos e resolver conflitos",
+        "ajuda": "Eles também podem propor alterações na Constituição Federal por meio de uma emenda constitucional e decidir aprovar ou não a criação de uma lei baseada em uma Medida Provisória, emitida pelo presidente.",
         "resposta": "true",
-        "texto_pergunta": "Ele pode impor penas nos outros poderes? "
+        "texto_pergunta": "Os Deputados federais podem fiscalizar o poder executivo?"
       }
     },
     {
-      "id": "6",
+      "id": "2",
       "questao": {
-        "ajuda": "Embora recebam essa denominação, o Supremo não é um ministério subordinado ao Executivo Federal. Por isso, os ministros do STF não estão na mesma hierarquia dos demais ministros de outras pastas",
+        "ajuda": "No caso do Distrito Federal os deputados são chamados de distritais, uma vez que o Distrito Federal não é um estado, mas, como o nome já diz, um distrito. Desse modo, os deputados distritais acumulam poderes de deputado estadual e de vereador, pois no Distrito Federal não ocorrem eleições para prefeitos e vereadores.",
         "resposta": "true",
-        "texto_pergunta": "O STF pode julgar decisões do presidente  em âmbito político?"
+        "texto_pergunta": "É possível os Deputados acumularem dois poderes?"
       }
     },
     {
-      "id": "7",
+      "id": "1",
       "questao": {
-        "ajuda": "O Poder Executivo brasileiro é representado pelo presidente da república e seus ministros; pelo governador e seus secretários estaduais; e pelo prefeito e seus secretários municipais. Cada uma dessas funções corresponde aos níveis federal, estadual e municipal respectivamente.",
-        "resposta": "false",
-        "texto_pergunta": "Esse poder também é administrado pelo Presidente?"
-      }
-    },
-    {
-      "id": "8",
-      "questao": {
-        "ajuda": "República Federativa do Brasil abre o precedente para certa independência administrativa, o que deixa a administração pública das cidades nas mãos do prefeito, como gestor executivo do município",
-        "resposta": "false",
-        "texto_pergunta": "O prefeito governa sozinho?"
-      }
-    },
-    {
-      "id": "9",
-      "questao": {
-        "ajuda": "Governador é o cargo político que representa o poder da administração estadual e a representação do Estado em suas relações jurídicas, políticas e administrativas, defendendo seus interesses junto à Presidência e buscando investimentos e obras federais. O governador do Distrito Federal, por ser um caso singular (município neutro).",
+        "ajuda": "É de responsabilidade dos vereadores: Mandato de quatro (4) anos, Elaboração da Lei Orgânica do Município, Número de integrantes nas câmaras proporcional à população do município, Legislar sobre assuntos de interesse local.",
         "resposta": "true",
-        "texto_pergunta": "O governador trabalha junto com o presidente executando as leis?"
+        "texto_pergunta": "O número de integrantes da câmara é proporcional à população?"
       }
     },
     {
-      "id": "10",
+
+
+      "id": "0",
       "questao": {
-        "ajuda": "O Brasil é uma república presidencialista, portanto, o presidente da república, além de chefe de Estado, é chefe de governo. Assim, ele é a autoridade máxima de nossa nação, pois a representa internacionalmente e também pode tomar decisões concernentes ao governo dela.",
+        "ajuda": "O legislativo é responsável por legislar, isto é, propor leis, e também por fiscalizar as ações que são realizadas pelo governo, que compõe o Executivo. É limitado ao nível para o qual ele foi eleito. Uma lei proposta por um membro, se aprovada, só terá validade dentro do estado para o qual ela atua. O trabalho de fiscalização de um deputado também acontece no Poder Executivo.",
         "resposta": "false",
-        "texto_pergunta": "O cargo de maior Poder Judiciário é o presidente?"
+        "texto_pergunta": "Os membros estaduais do legislativo tem o poder de legislar para outros estados."
       }
     }
   ]
