@@ -13,7 +13,7 @@ class CardPlacerView: UIView {
     lazy var cardView = CardView()
 
     private lazy var quizButton = make(QuizButton()) {
-        $0.textButton = "teste"
+        $0.textButton = "Valide seus conhecimentos!"
         $0.addTarget(self, action: #selector(tapQuizButton), for: .touchUpInside)
     }
 
@@ -73,7 +73,7 @@ extension CardPlacerView: ViewCodeConfiguration {
             // button constraints
             quizButton.topAnchor.constraint(equalTo: cardView.bottomAnchor, constant: 15),
             quizButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            quizButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.5)
+            quizButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.7)
         ])
     }
 
