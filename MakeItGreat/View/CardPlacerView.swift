@@ -36,17 +36,6 @@ class CardPlacerView: UIView {
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
 
-    private lazy var opaqueView = make(UIImageView()) {
-        $0.backgroundColor = .black
-        $0.layer.opacity = 0.3
-        $0.translatesAutoresizingMaskIntoConstraints = false
-    }
-
-    lazy var blurEffect = make(UIVisualEffectView(effect: blur)) {
-        $0.frame = self.bounds
-        $0.translatesAutoresizingMaskIntoConstraints = false
-    }
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         applyViewCode()

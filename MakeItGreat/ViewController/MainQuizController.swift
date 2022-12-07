@@ -45,9 +45,9 @@ class MainQuizController: UIViewController {
             let validateAnswer = self.quizList.quiz[self.number].validateAnswer(answer: answer)
             print(validateAnswer)
             if validateAnswer {
-                self?.quizView.setupLottieRight()
+                self.quizView.setupLottieRight()
             }else {
-                self?.quizView.setupLottieWrong()
+                self.quizView.setupLottieWrong()
             }
         }
     }
