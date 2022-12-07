@@ -10,7 +10,8 @@ import UIKit
 class CardPlacerView: UIView {
     var didTapQuizButton: (() -> Void)?
 
-    let cardView = CardView()
+    let blur = UIBlurEffect(style: .dark)
+    lazy var cardView = CardView()
 
     lazy var buttonQuiz = make(UIButton()) {
         $0.layer.cornerRadius = 20
@@ -19,9 +20,31 @@ class CardPlacerView: UIView {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
     }
-
+    
     @objc func buttonAction(sender: UIButton!) {
         didTapQuizButton?()
+    }
+
+    private lazy var opaqueView = make(UIImageView()) {
+        $0.backgroundColor = .black
+        $0.layer.opacity = 0.3
+        $0.translatesAutoresizingMaskIntoConstraints = false
+    }
+
+    lazy var blurEffect = make(UIVisualEffectView(effect: blur)) {
+        $0.frame = self.bounds
+        $0.translatesAutoresizingMaskIntoConstraints = false
+    }
+
+    private lazy var opaqueView = make(UIImageView()) {
+        $0.backgroundColor = .black
+        $0.layer.opacity = 0.3
+        $0.translatesAutoresizingMaskIntoConstraints = false
+    }
+
+    lazy var blurEffect = make(UIVisualEffectView(effect: blur)) {
+        $0.frame = self.bounds
+        $0.translatesAutoresizingMaskIntoConstraints = false
     }
 
     override init(frame: CGRect) {
@@ -38,6 +61,10 @@ class CardPlacerView: UIView {
 
 extension CardPlacerView: ViewCodeConfiguration {
     func buildHierarchy() {
+        addSubview(blurEffect)
+        addSubview(opaqueView)
+        sendSubviewToBack(blurEffect)
+        sendSubviewToBack(opaqueView)
         addSubview(cardView)
         addSubview(buttonQuiz)
 
@@ -45,6 +72,16 @@ extension CardPlacerView: ViewCodeConfiguration {
 
     func setupConstraints() {
         NSLayoutConstraint.activate([
+            // blur effect constraints
+            blurEffect.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            blurEffect.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            blurEffect.topAnchor.constraint(equalTo: self.topAnchor),
+            blurEffect.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            // opaque view constraints
+            opaqueView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            opaqueView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            opaqueView.topAnchor.constraint(equalTo: self.topAnchor),
+            opaqueView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             // card constraints
             cardView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             cardView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
@@ -62,7 +99,4 @@ extension CardPlacerView: ViewCodeConfiguration {
         cardView.layer.masksToBounds = true
         cardView.layer.cornerRadius = 15
     }
-
-
 }
-

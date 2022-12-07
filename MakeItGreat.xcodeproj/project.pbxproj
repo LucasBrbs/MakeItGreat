@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		360087CD29379D9600CBD8CE /* CardModelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360087CC29379D9600CBD8CE /* CardModelList.swift */; };
+		3666C462293E1753009FD391 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 3666C461293E1753009FD391 /* Lottie */; };
 		36FCB4812937774600C9BA05 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FCB4802937774600C9BA05 /* CardView.swift */; };
 		36FCB4832937776400C9BA05 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FCB4822937776400C9BA05 /* CardViewController.swift */; };
 		36FCB48529377A4400C9BA05 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FCB48429377A4400C9BA05 /* CardModel.swift */; };
@@ -84,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3666C462293E1753009FD391 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +263,9 @@
 			dependencies = (
 			);
 			name = MakeItGreat;
+			packageProductDependencies = (
+				3666C461293E1753009FD391 /* Lottie */,
+			);
 			productName = MakeItGreat;
 			productReference = FC4DA430292BA095007BFE08 /* MakeItGreat.app */;
 			productType = "com.apple.product-type.application";
@@ -311,6 +316,9 @@
 				Base,
 			);
 			mainGroup = FC4DA427292BA095007BFE08;
+			packageReferences = (
+				3666C460293E1753009FD391 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = FC4DA431292BA095007BFE08 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -538,8 +546,8 @@
 				INFOPLIST_FILE = MakeItGreat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -548,9 +556,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasbrbs.MakeItGreat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -566,8 +577,8 @@
 				INFOPLIST_FILE = MakeItGreat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -576,9 +587,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasbrbs.MakeItGreat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -653,6 +667,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3666C460293E1753009FD391 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3666C461293E1753009FD391 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3666C460293E1753009FD391 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FC4DA428292BA095007BFE08 /* Project object */;
 }

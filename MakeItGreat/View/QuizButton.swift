@@ -23,6 +23,7 @@ class QuizButton: UIButton {
         super.init(frame: .zero)
         self.backgroundColor = deselectedColor
         self.translatesAutoresizingMaskIntoConstraints = false
+        self.setTitleColor(.systemGray2, for: .normal)
     }
 
     required init?(coder: NSCoder) {
