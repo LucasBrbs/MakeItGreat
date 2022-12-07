@@ -7,15 +7,18 @@ class MainCardsController: UIViewController {
     override func loadView() {
         view = mainView
 
+
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainView.didTapOnButtonHandler = { [weak self] in
-            let nav = UINavigationController(rootViewController: CardViewController())
+        mainView.didTapOnButtonHandler = { [weak self] item in
+            print(item)
+            let nav = UINavigationController(rootViewController: CardViewController(number: item))
             nav.modalPresentationStyle = .overFullScreen
             self?.present(nav, animated: false)
         }
+
     }
 
     func loadDataFromJson() -> QuizList {

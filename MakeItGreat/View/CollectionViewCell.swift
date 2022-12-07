@@ -3,6 +3,7 @@ import UIKit
 public class CollectionViewCell: UICollectionViewCell {
     static let identifier: String = "CollectionViewCell"
 
+
     
     var cardScreen = make(CardView()) {
         $0.layer.masksToBounds = true
@@ -31,7 +32,7 @@ public class CollectionViewCell: UICollectionViewCell {
         trailingAnchorConstraint.constant = -240
     }
     
-    func configureSide(indexPath: IndexPath) {
+    func captureIndexPath(indexPath: IndexPath) {
         guard let resources: CardModelList = JsonManager.loadJson(path: "card_data") else { return }
         let cardsSequence = resources.card[indexPath.row]
 

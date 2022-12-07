@@ -10,7 +10,19 @@ import Lottie
 
 class MainQuizController: UIViewController {
 
-    let indexQuiz = 8
+    var didTapQuizHandler: ((Int) -> Void)?
+
+    var number: Int
+
+    init(number: Int) {
+        self.number = number
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        nil
+    }
+
     let quizView = QuizView()
     var quizList =  QuizList(quiz: [])
 
@@ -21,7 +33,7 @@ class MainQuizController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.quizList = loadQuiz()
-        quizView.configureView(model: quizList.quiz[indexQuiz])
+        quizView.configureView(model: self.quizList.quiz[number])
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -29,15 +41,17 @@ class MainQuizController: UIViewController {
             self?.navigationController?.popViewController(animated: true)
         }
         quizView.didTapAnswer = { [weak self] answer in
-            guard let validateAnswer = self?.quizList.quiz[self!.indexQuiz].validateAnswer(answer: answer) else { return }
+            guard let self else { return }
+            let validateAnswer = self.quizList.quiz[self.number].validateAnswer(answer: answer)
             print(validateAnswer)
             if validateAnswer {
-                self?.quizView.setupLottieRight()
+                self.quizView.setupLottieRight()
             }else {
-                self?.quizView.setupLottieWrong()
+                self.quizView.setupLottieWrong()
             }
         }
     }
+
 
     func loadQuiz() -> QuizList {
         guard let data: QuizList = JsonManager.loadJson(path: "quiz_data") else { return QuizList(quiz: [])}

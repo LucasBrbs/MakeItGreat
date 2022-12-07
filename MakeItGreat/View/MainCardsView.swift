@@ -10,7 +10,8 @@ import UIKit
 class MainCardsView: UIView {
 
     private var cont:Int = 0
-    var didTapOnButtonHandler: (() -> Void)?
+    var didTapOnButtonHandler: ((Int) -> Void)?
+    
 
     lazy var collectionView = make(UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())) {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -67,13 +68,13 @@ extension MainCardsView: UICollectionViewDelegateFlowLayout, UICollectionViewDat
         
         if(cont == 0){
             collectionView.scrollToItem(at: IndexPath(row: 10, section: 0), at: .bottom, animated: true)
-                cont += 1
+            cont += 1
         } else { }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as? CollectionViewCell
         
-        cell?.configureSide(indexPath: indexPath)
-                
+        cell?.captureIndexPath(indexPath: indexPath)
+
         return cell ?? UICollectionViewCell()
     }
 
@@ -86,17 +87,12 @@ extension MainCardsView: UICollectionViewDelegateFlowLayout, UICollectionViewDat
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    return 0.0
-        }
+        return 0.0
+    }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // usar presenter para aparecer com a tela e o card animado no meio
-        didTapOnButtonHandler?()
-//        if(indexPath.row == 1) {
-//            print("aaaa")
-//        } else {
-//            print("bbbbb")
-//
-//        }
+        didTapOnButtonHandler?(indexPath.item)
+
     }
+
 }
