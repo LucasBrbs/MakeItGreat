@@ -38,7 +38,7 @@ class MainQuizController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         quizView.popView = {[weak self] in
-            self?.navigationController?.popViewController(animated: true)
+            self?.navigationController?.dismiss(animated: true)
         }
         quizView.didTapAnswer = { [weak self] answer in
             guard let self else { return }

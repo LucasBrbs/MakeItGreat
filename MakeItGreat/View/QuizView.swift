@@ -9,11 +9,18 @@ import UIKit
 import Lottie
 
 class QuizView: UIView {
-
+    // closures bind
     var didTapAnswer: ((_ answer: Bool) -> Void)?
-    let animationView = LottieAnimationView()
     var popView: (() -> Void)?
 
+    // components of the view
+    lazy var animationViewRight = make(LottieAnimationView()) {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+    }
+
+    lazy var animationViewWrong = make(LottieAnimationView()) {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+    }
 
     private lazy var textQuestion = make(UILabel()) {
         $0.layer.masksToBounds = true
@@ -69,32 +76,31 @@ class QuizView: UIView {
     }
 
     func setupLottieRight() {
-        animationView.animation = LottieAnimation.named("right-lottie2")
-        animationView.translatesAutoresizingMaskIntoConstraints = false
-        animationView.contentMode = .scaleAspectFit
-        animationView.animationSpeed = 1.0
-        animationView.play { _ in
-            self.animationView.isHidden = true
+        animationViewRight.animation = LottieAnimation.named("right-lottie2")
+        animationViewRight.translatesAutoresizingMaskIntoConstraints = false
+        animationViewRight.contentMode = .scaleAspectFit
+        animationViewRight.animationSpeed = 1.0
+        animationViewRight.play { _ in
+            self.animationViewRight.isHidden = true
             self.popView?()
         }
         NSLayoutConstraint.activate([
-            animationView.heightAnchor.constraint(equalToConstant: 200),
-            animationView.widthAnchor.constraint(equalToConstant: 200)
+            animationViewRight.heightAnchor.constraint(equalToConstant: 200),
+            animationViewRight.widthAnchor.constraint(equalToConstant: 200)
         ])
     }
 
     func setupLottieWrong() {
-        animationView.animation = LottieAnimation.named("wrong-lottie2")
-        animationView.translatesAutoresizingMaskIntoConstraints = false
-        animationView.contentMode = .scaleAspectFit
-        animationView.animationSpeed = 1.0
-        animationView.play { _ in
-            self.animationView.isHidden = true
-            self.popView?()
+        animationViewWrong.animation = LottieAnimation.named("wrong-lottie2")
+        animationViewWrong.translatesAutoresizingMaskIntoConstraints = false
+        animationViewWrong.contentMode = .scaleAspectFit
+        animationViewWrong.animationSpeed = 1.0
+        animationViewWrong.play { _ in
+            self.animationViewWrong.isHidden = true
         }
         NSLayoutConstraint.activate([
-            animationView.heightAnchor.constraint(equalToConstant: 150),
-            animationView.widthAnchor.constraint(equalToConstant: 150)
+            animationViewWrong.heightAnchor.constraint(equalToConstant: 150),
+            animationViewWrong.widthAnchor.constraint(equalToConstant: 150)
         ])
     }
 
@@ -108,7 +114,8 @@ extension QuizView: ViewCodeConfiguration {
         addSubview(textQuestion)
         addSubview(trueButton)
         addSubview(falseButton)
-        addSubview(animationView)
+        addSubview(animationViewWrong)
+        addSubview(animationViewRight)
     }
 
     func setupConstraints() {
@@ -132,9 +139,13 @@ extension QuizView: ViewCodeConfiguration {
             falseButton.topAnchor.constraint(equalTo: trueButton.bottomAnchor, constant: 15),
             falseButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8),
             falseButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            // constraints animation view
-            animationView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 200),
-            animationView.centerXAnchor.constraint(equalTo: centerXAnchor)
+            // constraints animation view right
+            animationViewRight.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 200),
+            animationViewRight.centerXAnchor.constraint(equalTo: centerXAnchor),
+            
+            // constraints animation view wrong
+            animationViewWrong.centerXAnchor.constraint(equalTo: centerXAnchor),
+            animationViewWrong.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 200)
         ])
     }
 
