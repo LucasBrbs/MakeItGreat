@@ -9,12 +9,20 @@ import UIKit
 
 class CardPlacerView: UIView {
     var didTapQuizButton: (() -> Void)?
+
     let blur = UIBlurEffect(style: .dark)
     lazy var cardView = CardView()
 
-    private lazy var quizButton = make(QuizButton()) {
-        $0.textButton = "Valide seus conhecimentos!"
-        $0.addTarget(self, action: #selector(tapQuizButton), for: .touchUpInside)
+    lazy var buttonQuiz = make(UIButton()) {
+        $0.layer.cornerRadius = 20
+        $0.setTitle("Valide Seu Conhecimento", for: .normal)
+        $0.backgroundColor = .red
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+    }
+    
+    @objc func buttonAction(sender: UIButton!) {
+        didTapQuizButton?()
     }
 
     private lazy var opaqueView = make(UIImageView()) {
@@ -37,10 +45,7 @@ class CardPlacerView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    @objc func tapQuizButton() {
-        didTapQuizButton?()
-        quizButton.setSelected()
-    }
+
 }
 
 extension CardPlacerView: ViewCodeConfiguration {
@@ -50,7 +55,8 @@ extension CardPlacerView: ViewCodeConfiguration {
         sendSubviewToBack(blurEffect)
         sendSubviewToBack(opaqueView)
         addSubview(cardView)
-        addSubview(quizButton)
+        addSubview(buttonQuiz)
+
     }
 
     func setupConstraints() {
@@ -70,11 +76,12 @@ extension CardPlacerView: ViewCodeConfiguration {
             cardView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             cardView.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.5),
             cardView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8),
-            // button constraints
-            quizButton.topAnchor.constraint(equalTo: cardView.bottomAnchor, constant: 15),
-            quizButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            quizButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.7)
-        ])
+
+            buttonQuiz.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 650),
+            buttonQuiz.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 80),
+            buttonQuiz.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor,constant: -80),
+            buttonQuiz.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor,constant: -20)
+            ])
     }
 
     func configureViews() {
