@@ -4,9 +4,16 @@ class MainCardsController: UIViewController {
     let mainView = MainCardsView()
     let cardView = CardPlacerView()
 
+
+    //mockado para teste
+    lazy var collectionViewBackground = make(UIImageView()) {
+        $0.image = UIImage(named: "backgroundtest3")
+        $0.translatesAutoresizingMaskIntoConstraints = false
+    }
+
     override func loadView() {
         view = mainView
-
+//        mainView.collectionView.backgroundView = collectionViewBackground
 
     }
 

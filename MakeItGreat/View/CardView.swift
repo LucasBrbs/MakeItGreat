@@ -13,7 +13,6 @@ class CardView: UIView {
     let radius = UIScreen.main.bounds.width * 0.18 / 2
 
     lazy var cardImage = make(UIImageView()) {
-        $0.image = UIImage(named: "a074765a677ac545833c9a617cdfef29")
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
 
@@ -85,7 +84,9 @@ class CardView: UIView {
         cardName.text =  model.titulo
         cardDescription.text = model.descricao
         pontuation.text = model.id
-        departmentIcon.image = UIImage(systemName: model.poder)
+        departmentIcon.image = UIImage(systemName: "building.columns")
+//        cardImage.image = UIImage(named: model.titulo)
+        cardImage.image = UIImage(named: "CardBackground")
     }
 
 }
@@ -116,8 +117,8 @@ extension CardView: ViewCodeConfiguration {
             cardName.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             // card description constraints
             cardDescription.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 200 ),
-            cardDescription.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            cardDescription.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            cardDescription.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 13),
+            cardDescription.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -13),
             // circle constraints
             circleDepartment.heightAnchor.constraint(equalToConstant: radius * 2),
             circleDepartment.widthAnchor.constraint(equalToConstant: radius * 2),
@@ -126,8 +127,8 @@ extension CardView: ViewCodeConfiguration {
             // icon constraints
             departmentIcon.centerXAnchor.constraint(equalTo: circleDepartment.centerXAnchor),
             departmentIcon.centerYAnchor.constraint(equalTo: circleDepartment.centerYAnchor),
-            departmentIcon.heightAnchor.constraint(equalToConstant: radius * 0.8),
-            departmentIcon.widthAnchor.constraint(equalToConstant: radius * 0.8),
+            departmentIcon.heightAnchor.constraint(equalToConstant: radius * 0.9),
+            departmentIcon.widthAnchor.constraint(equalToConstant: radius * 0.9),
             // circle pontuation constraints
             circlePontuation.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             circlePontuation.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 30),

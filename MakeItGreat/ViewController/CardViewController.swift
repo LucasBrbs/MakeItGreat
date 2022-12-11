@@ -30,12 +30,12 @@ class CardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let cardData = loadCards()
-        cardPlacerView.cardView.configure(model: cardData.card[number])
+        cardPlacerView.cardViewa.configure(model: cardData.card[number])
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        cardPlacerView.cardView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        cardPlacerView.cardViewa.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -61,7 +61,7 @@ class CardViewController: UIViewController {
             withDuration: 0.3,
             delay: 0,
             animations: { [self] in
-                cardPlacerView.cardView.transform = CGAffineTransform(scaleX: 1, y: 1)
+                cardPlacerView.cardViewa.transform = CGAffineTransform(scaleX: 1, y: 1)
             })
     }
 
