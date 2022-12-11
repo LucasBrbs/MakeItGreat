@@ -5,7 +5,7 @@ public class CollectionViewCell: UICollectionViewCell {
 
 
     
-    var cardScreen = make(CardView()) {
+    var cardScreen = make(UIImageView()) {
         $0.layer.masksToBounds = true
         $0.layer.cornerRadius = 7
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -35,8 +35,8 @@ public class CollectionViewCell: UICollectionViewCell {
     func captureIndexPath(indexPath: IndexPath) {
         guard let resources: CardModelList = JsonManager.loadJson(path: "card_data") else { return }
         let cardsSequence = resources.card[indexPath.row]
+        cardScreen.image = UIImage(named: "CardBackground")
 
-        cardScreen.configure(model: CardModel(id: cardsSequence.id, funcao: cardsSequence.funcao, poder: cardsSequence.poder, descricao: cardsSequence.descricao, titulo: cardsSequence.titulo))
 
         if((indexPath.row)%2 == 0 ){
             self.cardRight()
@@ -54,9 +54,9 @@ public class CollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.contentView.backgroundColor = .clear
         self.contentView.addSubview(self.cardScreen)
         self.contentView.addSubview(self.progressBar)
-        self.backgroundColor = .systemBackground
         self.configConstraints()
     }
     

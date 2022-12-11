@@ -11,13 +11,13 @@ class CardPlacerView: UIView {
     var didTapQuizButton: (() -> Void)?
 
     let blur = UIBlurEffect(style: .dark)
-    lazy var cardView = CardView()
+    lazy var cardViewa = CardView()
 
     lazy var buttonQuiz = make(QuizButton()) {
         $0.cornerRadius = 20
         $0.textButton = "Valide seu conhecimento!"
         $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .red
+        $0.backgroundColor = .systemRed
         $0.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
     }
     
@@ -54,7 +54,7 @@ extension CardPlacerView: ViewCodeConfiguration {
         addSubview(opaqueView)
         sendSubviewToBack(blurEffect)
         sendSubviewToBack(opaqueView)
-        addSubview(cardView)
+        addSubview(cardViewa)
         addSubview(buttonQuiz)
 
     }
@@ -72,20 +72,20 @@ extension CardPlacerView: ViewCodeConfiguration {
             opaqueView.topAnchor.constraint(equalTo: self.topAnchor),
             opaqueView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             // card constraints
-            cardView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            cardView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            cardView.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.5),
-            cardView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8),
+            cardViewa.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            cardViewa.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            cardViewa.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.5),
+            cardViewa.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8),
             // button constraints
             buttonQuiz.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             buttonQuiz.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.7),
             buttonQuiz.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.1),
-            buttonQuiz.topAnchor.constraint(equalTo: cardView.bottomAnchor, constant: 20)
+            buttonQuiz.topAnchor.constraint(equalTo: cardViewa.bottomAnchor, constant: 20)
         ])
     }
 
     func configureViews() {
-        cardView.layer.masksToBounds = true
-        cardView.layer.cornerRadius = 15
+        cardViewa.layer.masksToBounds = true
+        cardViewa.layer.cornerRadius = 25
     }
 }

@@ -11,20 +11,17 @@ class MainCardsView: UIView {
 
     private var cont:Int = 0
     var didTapOnButtonHandler: ((Int) -> Void)?
-    
 
     lazy var collectionView = make(UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())) {
+        $0.backgroundColor = .clear
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.backgroundColor = .systemBackground
         $0.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.identifier)
-        
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = .vertical
         
         $0.setCollectionViewLayout(layout, animated: false)
         $0.delegate = self
         $0.dataSource = self
-        
     }
     
     func scrollToItem(
@@ -53,7 +50,7 @@ extension MainCardsView: ViewCodeConfiguration {
             collectionView.topAnchor.constraint(equalTo: self.topAnchor),
             collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
         ])
     }
     
@@ -72,8 +69,9 @@ extension MainCardsView: UICollectionViewDelegateFlowLayout, UICollectionViewDat
         } else { }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as? CollectionViewCell
-        
+
         cell?.captureIndexPath(indexPath: indexPath)
+//        cell?.cardScreen.image = UIImage(named: )
 
         return cell ?? UICollectionViewCell()
     }
